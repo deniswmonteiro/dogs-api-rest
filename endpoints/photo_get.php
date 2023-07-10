@@ -75,7 +75,7 @@
         $args = [
             'post_type' => 'post',
             'author' => $_user,
-            'post_per_page' => $_total,
+            'posts_per_page' => $_total,
             'paged' => $_page
         ];
 
@@ -88,12 +88,6 @@
                 $photos[] = photo_data($post);
             }
         }
-
-        $response = [
-            'total' => $_total,
-            'page' => $_page,
-            'user' => $_user,
-        ];
 
         return rest_ensure_response($photos);
     }
