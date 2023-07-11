@@ -32,7 +32,7 @@
 
         wp_mail($user_email, 'Password Reset', $body);
 
-        return rest_ensure_response('Email enviado.');
+        return rest_ensure_response('Email enviado com sucesso.');
     }
 
     function register_api_password_lost() {
